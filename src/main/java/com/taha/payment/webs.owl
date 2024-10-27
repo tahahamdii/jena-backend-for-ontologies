@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-4 "http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#UsesTransportation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;UsesTransportation">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Transportation"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#attendsEvent -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;attendsEvent">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;hasActivity">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;hasDestination">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#hasRestaurant -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;hasRestaurant">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#hasTransportation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;hasTransportation">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;Transportation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#heldAt -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;heldAt">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#holdsEvent -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;holdsEvent">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;locatedIn">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#offersActivity -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;offersActivity">
+        <rdfs:range rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#suitableFor -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;suitableFor">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#takesPlaceIn -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;takesPlaceIn">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#usedBy -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-4;usedBy">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:range rdf:resource="&untitled-ontology-4;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#budget -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;budget">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#category -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;category">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#cuisineType -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;cuisineType">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#duration -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;duration">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoAwarenessLevel -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;ecoAwarenessLevel">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoRating -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;ecoRating">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Transportation"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#impactScore -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;impactScore">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Transportation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#location -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;location">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;name">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Activity"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#popularity -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;popularity">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#preferences -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;preferences">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#season -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;season">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Destination"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#type -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-4;type">
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Event"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-4;Transportation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#Activity -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#Destination -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;Destination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#Event -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#Restaurant -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;Restaurant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#Transportation -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;Transportation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#User -->
+
+    <owl:Class rdf:about="&untitled-ontology-4;User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#dali -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;dali">
+        <rdf:type rdf:resource="&untitled-ontology-4;User"/>
+        <budget rdf:datatype="&xsd;float">1000.0</budget>
+        <location rdf:datatype="&xsd;string">ALG</location>
+        <name rdf:datatype="&xsd;string">Dali</name>
+        <preferences rdf:datatype="&xsd;string">city sightseeing, local culture, eco-friendly
+</preferences>
+        <ecoAwarenessLevel rdf:datatype="&xsd;string">high</ecoAwarenessLevel>
+        <hasActivity rdf:resource="&untitled-ontology-4;ecoActivity2"/>
+        <hasDestination rdf:resource="&untitled-ontology-4;ecoDestination2"/>
+        <hasRestaurant rdf:resource="&untitled-ontology-4;ecoRestaurant2"/>
+        <UsesTransportation rdf:resource="&untitled-ontology-4;ecoTransportation2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoActivity1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoActivity1">
+        <rdf:type rdf:resource="&untitled-ontology-4;Activity"/>
+        <impactScore rdf:datatype="&xsd;float">1.5</impactScore>
+        <duration rdf:datatype="&xsd;float">2.5</duration>
+        <ecoRating rdf:datatype="&xsd;integer">8</ecoRating>
+        <name rdf:datatype="&xsd;string">Hiking Tour</name>
+        <category rdf:datatype="&xsd;string">hiking</category>
+        <takesPlaceIn rdf:resource="&untitled-ontology-4;ecoDestination1"/>
+        <suitableFor rdf:resource="&untitled-ontology-4;taha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoActivity2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoActivity2">
+        <rdf:type rdf:resource="&untitled-ontology-4;Activity"/>
+        <duration rdf:datatype="&xsd;float">1.5</duration>
+        <impactScore rdf:datatype="&xsd;float">3.0</impactScore>
+        <ecoRating rdf:datatype="&xsd;integer">5</ecoRating>
+        <name rdf:datatype="&xsd;float">SunnyCity Tour</name>
+        <category rdf:datatype="&xsd;string">sightseeing</category>
+        <suitableFor rdf:resource="&untitled-ontology-4;dali"/>
+        <takesPlaceIn rdf:resource="&untitled-ontology-4;ecoDestination2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoDestination1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoDestination1">
+        <rdf:type rdf:resource="&untitled-ontology-4;Destination"/>
+        <impactScore rdf:datatype="&xsd;float">2.5</impactScore>
+        <popularity rdf:datatype="&xsd;integer">8</popularity>
+        <ecoRating rdf:datatype="&xsd;integer">9</ecoRating>
+        <name rdf:datatype="&xsd;string">national park </name>
+        <season rdf:datatype="&xsd;string">summer</season>
+        <offersActivity rdf:resource="&untitled-ontology-4;ecoActivity1"/>
+        <holdsEvent rdf:resource="&untitled-ontology-4;ecoEvent1"/>
+        <hasRestaurant rdf:resource="&untitled-ontology-4;ecoRestaurant1"/>
+        <hasTransportation rdf:resource="&untitled-ontology-4;ecoTransportation1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoDestination2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoDestination2">
+        <rdf:type rdf:resource="&untitled-ontology-4;Destination"/>
+        <popularity rdf:datatype="&xsd;integer">10</popularity>
+        <ecoRating rdf:datatype="&xsd;integer">4</ecoRating>
+        <impactScore rdf:datatype="&xsd;float">5.5</impactScore>
+        <name rdf:datatype="&xsd;string">Belvedere</name>
+        <season rdf:datatype="&xsd;string">year-round</season>
+        <offersActivity rdf:resource="&untitled-ontology-4;ecoActivity2"/>
+        <holdsEvent rdf:resource="&untitled-ontology-4;ecoEvent2"/>
+        <hasRestaurant rdf:resource="&untitled-ontology-4;ecoRestaurant2"/>
+        <hasTransportation rdf:resource="&untitled-ontology-4;ecoTransportation2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoEvent1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoEvent1">
+        <rdf:type rdf:resource="&untitled-ontology-4;Event"/>
+        <impactScore rdf:datatype="&xsd;float">1.0</impactScore>
+        <duration rdf:datatype="&xsd;float">3.0</duration>
+        <name rdf:datatype="&xsd;string">Greenwood festival</name>
+        <type rdf:datatype="&xsd;string">festival</type>
+        <heldAt rdf:resource="&untitled-ontology-4;ecoDestination1"/>
+        <usedBy rdf:resource="&untitled-ontology-4;taha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoEvent2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoEvent2">
+        <rdf:type rdf:resource="&untitled-ontology-4;Event"/>
+        <impactScore rdf:datatype="&xsd;float">1.0</impactScore>
+        <duration rdf:datatype="&xsd;float">2.0</duration>
+        <name rdf:datatype="&xsd;string">Music Fest</name>
+        <type rdf:datatype="&xsd;string">festival</type>
+        <usedBy rdf:resource="&untitled-ontology-4;dali"/>
+        <heldAt rdf:resource="&untitled-ontology-4;ecoDestination2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoRestaurant1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoRestaurant1">
+        <rdf:type rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <impactScore rdf:datatype="&xsd;float">1.0</impactScore>
+        <ecoRating rdf:datatype="&xsd;integer">8</ecoRating>
+        <name rdf:datatype="&xsd;string">Bistro</name>
+        <cuisineType rdf:datatype="&xsd;string">organic, vegan</cuisineType>
+        <locatedIn rdf:resource="&untitled-ontology-4;ecoDestination1"/>
+        <suitableFor rdf:resource="&untitled-ontology-4;taha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoRestaurant2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoRestaurant2">
+        <rdf:type rdf:resource="&untitled-ontology-4;Restaurant"/>
+        <impactScore rdf:datatype="&xsd;float">3.5</impactScore>
+        <ecoRating rdf:datatype="&xsd;integer">6</ecoRating>
+        <name rdf:datatype="&xsd;string">local Eats</name>
+        <cuisineType rdf:datatype="&xsd;string">local cuisine</cuisineType>
+        <suitableFor rdf:resource="&untitled-ontology-4;dali"/>
+        <locatedIn rdf:resource="&untitled-ontology-4;ecoDestination2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoTransportation1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoTransportation1">
+        <rdf:type rdf:resource="&untitled-ontology-4;Transportation"/>
+        <impactScore rdf:datatype="&xsd;float">1.2</impactScore>
+        <ecoRating rdf:datatype="&xsd;integer">9</ecoRating>
+        <name rdf:datatype="&xsd;string">EcoBus</name>
+        <type rdf:datatype="&xsd;string">electrical bus</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#ecoTransportation2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;ecoTransportation2">
+        <rdf:type rdf:resource="&untitled-ontology-4;Transportation"/>
+        <impactScore rdf:datatype="&xsd;float">0.5</impactScore>
+        <ecoRating rdf:datatype="&xsd;integer">8</ecoRating>
+        <name rdf:datatype="&xsd;string">city Bike</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#taha -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-4;taha">
+        <rdf:type rdf:resource="&untitled-ontology-4;User"/>
+        <budget rdf:datatype="&xsd;float">1000.0</budget>
+        <location rdf:datatype="&xsd;string">TUN</location>
+        <ecoAwarenessLevel rdf:datatype="&xsd;string">high</ecoAwarenessLevel>
+        <preferences rdf:datatype="&xsd;string">nature, hiking, organic food
+</preferences>
+        <name rdf:datatype="&xsd;string">taha</name>
+        <hasActivity rdf:resource="&untitled-ontology-4;ecoActivity1"/>
+        <hasDestination rdf:resource="&untitled-ontology-4;ecoDestination1"/>
+        <hasRestaurant rdf:resource="&untitled-ontology-4;ecoRestaurant1"/>
+        <UsesTransportation rdf:resource="&untitled-ontology-4;ecoTransportation1"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
