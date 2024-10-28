@@ -19,14 +19,11 @@ public class EcoTourismService {
         // Define SPARQL query
         String sparqlQuery = """
         PREFIX ex: <http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#>
-        SELECT ?destination ?name ?ecoRating
-        WHERE {
-            ?destination a ex:Destination .
-            OPTIONAL {
-                ?destination ex:name ?name .
-                ?destination ex:ecoRating ?ecoRating .
-            }
-        }
+                    SELECT ?name
+                    WHERE {
+                        ex:ecoDestination1 ex:name ?name .
+                    }
+                    
     """;
 
         Dataset dataset = jenaBackend.getDataset();
