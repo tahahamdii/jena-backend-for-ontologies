@@ -15,18 +15,19 @@ public class EcoTourismService {
         this.jenaBackend = jenaBackend;
     }
 
-    public ResultSet getEcoFriendlyDestinations() {
-        // Define SPARQL query without any filter
+    public ResultSet getAllDestinations() {
+        // Define SPARQL query
         String sparqlQuery = """
-    PREFIX ex: <http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#>
-    SELECT ?destination ?name ?ecoRating
-    WHERE {
-        ?destination a ex:Destination ;
-                    ex:name ?name ;
-                    ex:ecoRating ?ecoRating .
-    }
+        PREFIX ex: <http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#>
+        SELECT ?destination ?name ?ecoRating
+        WHERE {
+            ?destination a ex:Destination .
+            OPTIONAL {
+                ?destination ex:name ?name .
+                ?destination ex:ecoRating ?ecoRating .
+            }
+        }
     """;
-
 
         Dataset dataset = jenaBackend.getDataset();
         dataset.begin(ReadWrite.READ);
@@ -34,10 +35,18 @@ public class EcoTourismService {
         Query query = QueryFactory.create(sparqlQuery);
         try (QueryExecution qexec = QueryExecutionFactory.create(query, dataset)) {
             ResultSet results = qexec.execSelect();
+
+            while (results.hasNext()) {
+                QuerySolution soln = results.nextSolution();
+                String destination = soln.getResource("destination").toString();
+                String name = soln.contains("name") ? soln.getLiteral("name").getString() : "N/A";
+
+                System.out.println("Destination: " + destination + ", Name: " + name + ", Eco Rating: " );
+            }
+
             return ResultSetFactory.copyResults(results); // Make a copy to use outside the transaction
-        } finally {
-            dataset.end();
         }
+
     }
 
 }

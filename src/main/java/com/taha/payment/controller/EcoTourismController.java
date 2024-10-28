@@ -15,9 +15,11 @@ public class EcoTourismController {
     @Autowired
     private EcoTourismService ecoTourismService;
 
-    @GetMapping("/all-destinations")
-    public String getAllDestinations() {
-        ResultSet results = ecoTourismService.getEcoFriendlyDestinations();
+    @GetMapping("/destinations")
+    public String getAllDestinations(
+            ) {
+
+        ResultSet results = ecoTourismService.getAllDestinations();
 
         // Convert ResultSet to JSON format for API response
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -25,5 +27,4 @@ public class EcoTourismController {
 
         return outputStream.toString();
     }
-
 }
