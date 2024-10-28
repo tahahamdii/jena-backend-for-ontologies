@@ -15,12 +15,9 @@ public class EcoTourismController {
     @Autowired
     private EcoTourismService ecoTourismService;
 
-    @GetMapping("/destinations")
-    public String getEcoFriendlyDestinations(
-            @RequestParam String preference,
-            @RequestParam int ecoRatingThreshold) {
-
-        ResultSet results = ecoTourismService.getEcoFriendlyDestinations(preference, ecoRatingThreshold);
+    @GetMapping("/all-destinations")
+    public String getAllDestinations() {
+        ResultSet results = ecoTourismService.getEcoFriendlyDestinations();
 
         // Convert ResultSet to JSON format for API response
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -28,4 +25,5 @@ public class EcoTourismController {
 
         return outputStream.toString();
     }
+
 }

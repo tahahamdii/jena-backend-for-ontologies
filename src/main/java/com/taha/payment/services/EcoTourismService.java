@@ -15,21 +15,18 @@ public class EcoTourismService {
         this.jenaBackend = jenaBackend;
     }
 
-    public ResultSet getEcoFriendlyDestinations(String preference, int ecoRatingThreshold) {
-        // Define SPARQL query with parameters
+    public ResultSet getEcoFriendlyDestinations() {
+        // Define SPARQL query without any filter
         String sparqlQuery = """
-            PREFIX ex: <http://example.org/eco-tourism#>
-            SELECT ?destination ?name ?ecoRating
-            WHERE {
-                ?destination a ex:Destination ;
-                            ex:name ?name ;
-                            ex:ecoRating ?ecoRating ;
-                            ex:category ?category .
-                FILTER(?ecoRating >= """ + ecoRatingThreshold + """ 
-                       && CONTAINS(?category, '""" + preference + """
-            '))
-            }
-            """;
+    PREFIX ex: <http://www.semanticweb.org/lenovo/ontologies/2024/9/untitled-ontology-4#>
+    SELECT ?destination ?name ?ecoRating
+    WHERE {
+        ?destination a ex:Destination ;
+                    ex:name ?name ;
+                    ex:ecoRating ?ecoRating .
+    }
+    """;
+
 
         Dataset dataset = jenaBackend.getDataset();
         dataset.begin(ReadWrite.READ);
@@ -42,4 +39,5 @@ public class EcoTourismService {
             dataset.end();
         }
     }
+
 }
