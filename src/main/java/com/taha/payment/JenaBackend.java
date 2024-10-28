@@ -7,18 +7,16 @@ import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.util.FileManager;
 import org.springframework.stereotype.Component;
 
-import javax.xml.crypto.Data;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-@Component // Add this annotation
-
+@Component
 public class JenaBackend {
-    private Dataset dataset;
+    private final Dataset dataset;
 
     public JenaBackend() {
         dataset = TDBFactory.createDataset();
-        loadOntology("/webs.owl");
+        loadOntology("/webs.ttl"); // Change to Turtle file
     }
 
     private void loadOntology(String filePath) {
@@ -26,11 +24,13 @@ public class JenaBackend {
             if (in == null) {
                 throw new FileNotFoundException("Ontology file not found: " + filePath);
             }
-            Model model = FileManager.get().loadModel("file:src/main/resources" + filePath,null,"RDF/XML");
+
+            // Load Turtle data
+            Model model = FileManager.get().loadModel("file:src/main/resources" + filePath, null, "TURTLE");
             dataset.begin(ReadWrite.WRITE);
             dataset.addNamedModel("ecotourismOntology", model);
-            System.out.println("Number of triples loaded: " + model.size());
-
+            System.out.println("Triples in the model: " + model.size());
+            model.write(System.out, "TURTLE"); // Print the model in Turtle format
             dataset.commit();
         } catch (Exception e) {
             System.err.println("Error loading ontology file: " + e.getMessage());
